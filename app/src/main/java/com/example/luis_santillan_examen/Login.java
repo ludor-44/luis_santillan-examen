@@ -26,12 +26,13 @@ public class Login extends AppCompatActivity {
     }
 
     public void login(View view){
-        String usuario="0", contraseña="0"; //"estudiante2020", contraseña="uisrael2020"
+        String usuario="estudiante2020", contraseña="uisrael2020";
         String login1=user.getText().toString();
         String login2=password.getText().toString();
         if( login1.equals(usuario)&&login2.equals(contraseña)){
             Toast.makeText(getApplicationContext(),"Ha Iniciado sesión correctamente",Toast.LENGTH_SHORT).show();
             Intent intent= new Intent(Login.this,Registro.class);
+            intent.putExtra("ingreso_User_Luis_Santillan", user.getText().toString());
             startActivity(intent);
         }
 
