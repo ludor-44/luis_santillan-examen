@@ -1,13 +1,14 @@
 package com.example.luis_santillan_examen;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.widget.EditText;
-import android.widget.TextView;
+        import android.annotation.SuppressLint;
+        import android.os.Bundle;
+        import android.widget.EditText;
+        import android.widget.TextView;
 
 public class Resumen extends AppCompatActivity {
+
 
     EditText usuarioConectado, nombreConectado, resumen, respuestaFut, respuestaTen, respuestaBalo,
             respuestaSi;
@@ -16,7 +17,7 @@ public class Resumen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumen);
         usuarioConectado=findViewById(R.id.etUContectado);
-        nombreConectado=findViewById(R.id.etRespuesta);
+        nombreConectado=findViewById(R.id.etNombre);
         resumen=findViewById(R.id.etRespuesta);
         respuestaFut=findViewById(R.id.etFut);
         respuestaTen=findViewById(R.id.etTen);
@@ -35,6 +36,3 @@ public class Resumen extends AppCompatActivity {
 
 
 }
-
-
-

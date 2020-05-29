@@ -17,9 +17,9 @@ public class Encuesta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encuesta);
 
-        respuestaL=findViewById(R.id.etRespuesta);
-        cFutbol=findViewById(R.id.ckbFutbol);
-        cTenis=findViewById(R.id.ckbTenis);
+        respuestaL=findViewById(R.id.etCentro);
+        cFutbol=findViewById(R.id.cbTenis);
+        cTenis=findViewById(R.id.cbbox);
         cBaloncesto=findViewById(R.id.ckbBaloncesto);
         radioS=findViewById(R.id.rbSi);
         radioN=findViewById(R.id.rbNo);

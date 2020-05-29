@@ -7,27 +7,41 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Registro extends AppCompatActivity {
 
-    EditText nombre, mensual,total;
-    Button enviar;
+    EditText monto, nombre;
+    TextView mensual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-        nombre=findViewById(R.id.etNombre);
-        mensual=findViewById(R.id.etMontoInicial);
-        total=findViewById(R.id.etMensual);
-        enviar=findViewById(R.id.btnEnviar);
+
+        nombre = findViewById(R.id.etNombre);
+        monto = (EditText)findViewById(R.id.etMonto);
+        mensual = findViewById(R.id.tvMensual);
+
     }
-    public void Enviar(View view){
-        String nombreEnvio;
-        nombreEnvio = nombre.getText().toString();
-        Toast.makeText(getApplicationContext(),"Elementos guardados con exito",Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(Registro.this, Encuesta.class);
-        intent.putExtra("LUIS SANTILLAN",nombreEnvio); //luis
-        startActivity(intent);
+
+    public void calculo(View v){
+        double inMonto = Double.parseDouble(monto.getText().toString());
+        double resultado;
+
+        double porcentaje;
+        porcentaje = inMonto*0.05;
+
+        resultado = (((1800-inMonto)/3)+porcentaje);
+
+        mensual.setText(String.valueOf(resultado));
+    }
+
+    public void guardarReg(View v){
+
+        Intent abrirEncu = new Intent(this, Encuesta.class);
+        abrirEncu.putExtra("nom", nombre.getText().toString());
+        abrirEncu.putExtra("mensu", mensual.getText().toString());
+        startActivity(abrirEncu);
     }
 }

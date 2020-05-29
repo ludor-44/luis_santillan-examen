@@ -19,7 +19,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etRespuesta"
+        android:layout_above="@+id/etCentro"
         android:layout_centerInParent="true"
         android:text=" ¿Por qué eligió este centro educativo? "
         android:textColor="#3F51B5"
@@ -27,7 +27,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etRespuesta"
+        android:id="@+id/etCentro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -39,7 +39,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ckbFutbol"
+        android:layout_above="@+id/cbTenis"
         android:layout_centerInParent="true"
         android:text=" ¿Qué deportes practica? "
         android:textColor="#3F51B5"
@@ -47,28 +47,28 @@
         android:textStyle="bold" />
 
     <CheckBox
-        android:id="@+id/ckbFutbol"
+        android:id="@+id/cbTenis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ckbTenis"
+        android:layout_above="@+id/cbbox"
         android:layout_centerInParent="true"
         android:text="Futbol" />
 
     <CheckBox
-        android:id="@+id/ckbTenis"
+        android:id="@+id/cbbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ckbBaloncesto"
         android:layout_centerInParent="true"
-        android:text="Tenis" />
+        android:text="Box" />
 
     <CheckBox
         android:id="@+id/ckbBaloncesto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_above="@+id/textView3"
-        android:text="Baloncesto" />
+        android:layout_centerInParent="true"
+        android:text="Natacion" />
 
     <TextView
         android:id="@+id/textView3"
